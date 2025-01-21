@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing</title>
+</head>
+<body>
+    <form method="post" th:action="@{/songs}">
+        <div>
+            <label for="year">Year:</label><br>
+            <select name="year" id="year">
+                <span th:each=" y : ${years}">
+                    <option th:value="${y}" th:text="${y}"></option>
+                </span>
+            </select>
+        </div><br>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
