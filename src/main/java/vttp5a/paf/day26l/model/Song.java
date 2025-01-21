@@ -22,10 +22,10 @@ public class Song {
     public static Song toSong(Document d) {
         Song s = new Song();
         String artistName = d.getString("artist(s)_name");
-        System.out.println(d.get("track_name"));
+        // System.out.println(d.get("track_name"));
         Object o = d.get("track_name");
         if(o instanceof String){
-            s.setTrackName(artistName);
+            s.setTrackName((String)o);
         } else{
             s.setTrackName(String.valueOf(o));
         }
